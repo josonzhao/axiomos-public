@@ -37,7 +37,7 @@ detect_platform() {
   ARCH="$(uname -m)"
 
   case "$OS" in
-    darwin) OS="mac" ;;
+    darwin) OS="macos" ;;
     linux)   OS="linux" ;;
     msys*|cygwin*|mingw*) OS="win" ;;
     *) error "不支持的操作系统: $OS" ;;
