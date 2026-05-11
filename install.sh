@@ -58,11 +58,8 @@ info "检测到平台: $PLATFORM"
 BINARY_NAME="axiomos-proxy-${PLATFORM}"
 [ "$PLATFORM" = "win-x64" ] && BINARY_NAME="${BINARY_NAME}.exe"
 
-# 二进制下载地址 — 请修改为你的实际公开地址
-# 选项1: 使用 GitHub Releases (需要单独公开 repo)
-# 选项2: 使用对象存储 (AWS S3 / 阿里云 OSS / 腾讯云 COS)
-# 选项3: 使用 Vercel/Netlify 等静态托管
-BASE_URL="${BASE_URL:-https://axiomos.s3.amazonaws.com}"
+# 二进制下载地址
+BASE_URL="${BASE_URL:-https://github.com/josonzhao/axiomos-public/raw/main/bin}"
 DOWNLOAD_URL="${BASE_URL}/${BINARY_NAME}"
 
 info "下载 ${BINARY_NAME} ..."
